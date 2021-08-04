@@ -1,7 +1,28 @@
 Q1: Detect the numbers from 1 to 100
+Ans:    
+    number = int(input("Fill in any number："))
+    if 1<=number<=100 :
+        print("Correct！")
+    else:
+        print("Wrong! It is not between 1-100!")
 
-number = int(input("Fill in any number："))
-if 1<=number<=100 :
-    print("Correct！")
-else:
-    print("Wrong! It is not between 1-100!")
+
+Q2: Print any poetry into different lines
+Ans:
+    raven = 
+    (
+    'Once upon a midnight dreary,\n'
+    'While I pondered, weak and weary,\n' 
+    'Over many a quaint and curious...\n' 
+    )
+    print(raven)
+
+
+Q3: How many seconds per year?
+Ans:    
+    hours = 24
+    minutes = 60
+    days = 365
+    seconds = 60
+    print(hours*minutes*days*seconds)
+
