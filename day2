@@ -1,0 +1,54 @@
+Q1 Iterate 10 times code
+Ans:
+    i = 10
+    while i:
+        print('any loops')
+        i = i - 1
+
+
+Q2 Short-circuit logic  OR  lazy evaluation
+Ans:
+    0 or 0 or 3 or 4   # or return the first 'TRUE'
+    output: 3
+    
+    1 and 0 and 5        # and return the first 'FALSE'
+    output: 0
+
+
+Q3 A small game: 
+      Guess a random number from 1 to 10 within 3 attempts,
+      A hint will be given for each wrong guess, 
+      Game will end if the correct number is given
+Ans:
+    import random
+    secret = random.randint(1,10)                  #Random number for each new game
+    limit = 3                                      #Only 3 attempts are allowed
+    attempt = 0
+    number= input('guess a number?')
+    guess = int(number)
+
+    if guess == secret:
+        print('Correct!')
+    else:
+        while guess != secret:
+            attempt = attempt + 1
+            print('You have '+str(limit - attempt)+' more attempts:')
+            if attempt == limit:
+                print('GAME OVER!!!')
+                break
+            if guess > secret:
+                    temp= input('Wrong, Make a smaller guess pls:')
+                    guess = int(temp)
+            if guess < secret:
+                    temp= input('Wrong, Make a bigger guess pls:')
+                    guess = int(temp)
+            if guess == secret:
+                print('Correct!')
+                
+Possible output: 
+    guess a number?6
+    You have 2 more attempts:
+    Wrong, Make a bigger guess pls:8
+    You have 1 more attempts:
+    Wrong, Make a smaller guess pls:7
+    Correct!                
